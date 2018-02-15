@@ -23,4 +23,5 @@ java -Djavax.net.debug=ssl \
      -Djavax.net.ssl.trustStore=keys/truststore.jks \
      -Djavax.net.ssl.trustStorePassword=password \
      -Dhttps.cipherSuites=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA \
+     -Djava.util.logging.config.file=logging.properties \
      Client
