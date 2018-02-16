@@ -39,7 +39,8 @@ func main() {
         Addr:         ":8443",
         Handler:      mux,
         TLSConfig:    cfg,
-        TLSNextProto: make(map[string]func(*http.Server, *tls.Conn, http.Handler), 0),
+// uncomment next line to  turn off http/2 support
+//        TLSNextProto: make(map[string]func(*http.Server, *tls.Conn, http.Handler), 0),
     }
     log.Fatal(srv.ListenAndServeTLS("keys/server.pem", "keys/server.key"))
 }
